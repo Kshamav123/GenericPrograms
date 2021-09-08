@@ -3,15 +3,15 @@ package com.testmaxg;
 public class MaxMain {
 	public static void main(String args[]) {
 		
-		Integer firstNo1=40,secondNo1=20,thirdNo1=30;
-		TestMax obj=new TestMax(firstNo1,secondNo1,thirdNo1);
-		obj.maxNo();
-		Integer firstNo2=64,secondNo2=50,thirdNo2=70;
-		TestMax obj2=new TestMax(firstNo2,secondNo2,thirdNo2);
-		obj.maxNo();
-		Integer firstNo3=15,secondNo3=50,thirdNo3=88;
-		TestMax obj3=new TestMax(firstNo3,secondNo3,thirdNo3);
-		obj3.maxNo();
+		
+		TestMax obj=new TestMax();
+		obj.maxNo(40.6f, 40.6f, 36.6f);
+		
+		TestMax obj2=new TestMax();
+		obj.maxNo(34.6f,54.7f,23.7f);
+	
+		TestMax obj3=new TestMax();
+		obj3.maxNo(45.6f,63.6f,23.6f);
 	}
 
 }
