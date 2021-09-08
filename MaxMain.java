@@ -3,12 +3,12 @@ package com.testmaxg;
 public class MaxMain {
 	public static void main(String args[]) {
 
-		TestMax obj = new TestMax();
-		obj.maxNo(40.6f, 20.6f, 36.6f);
-		TestMax obj2 = new TestMax();
-		obj.maxNo(34.6f, 54.7f, 23.7f);
-		TestMax obj3 = new TestMax();
-		obj3.maxNo(15.6f, 63.6f, 93.6f);
+		TestMax obj1=new TestMax("Apple", "Peach", "Watermelon");
+		obj1.findStringMax();
+		TestMax obj2=new TestMax("Watermelon", "Apple", "Banana");
+		obj2.findStringMax();;
+		TestMax obj3=new TestMax("Orange", "Banana", "Apple");
+		obj3.findStringMax();;
 	}
 
 }
