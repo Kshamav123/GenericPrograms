@@ -2,13 +2,16 @@ package com.testmaxg;
 
 public class MaxMain {
 	public static void main(String args[]) {
-
-		TestMax obj1=new TestMax("Apple", "Peach", "Watermelon");
-		obj1.findStringMax();
-		TestMax obj2=new TestMax("Watermelon", "Apple", "Banana");
-		obj2.findStringMax();;
-		TestMax obj3=new TestMax("Orange", "Banana", "Apple");
-		obj3.findStringMax();;
-	}
+		
+		
+			Integer firstInt=121, secondInt=76,thirdInt=210;
+			new TestMax(firstInt,secondInt,thirdInt).maximumNo(firstInt,secondInt,thirdInt);
+			
+			Float firstFloat=30.7f, secondFloat=31.7f,thirdFloat=23.5f;
+			new TestMax(firstFloat,secondFloat,thirdFloat).maximumNo(firstFloat,secondFloat,thirdFloat);
+			
+			String firstWord= "Watermelon", secondWord= "Peach",thirdWord= "Banana";
+			new TestMax(firstWord,secondWord,thirdWord).maximumNo(firstWord,secondWord,thirdWord);
+		}
 
 }

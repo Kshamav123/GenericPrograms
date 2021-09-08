@@ -1,26 +1,37 @@
 package com.testmaxg;
 
-public class TestMax {
-	public static String first,second,third;
+public class TestMax<T extends Comparable<T>>{
 	
-	public TestMax(String first,String second,String third) {
-		this.first=first;
-		this.second=second;
-		this.third=third;
-	
-	}
-	
-	public static void findStringMax() {
-		String max=first;
-		if(second.compareTo(max)>0) {
-			
-			max=second;
-		}
-		if(third.compareTo(max)>0) {
-			max=third;
+		
+		T firstNo,secondNo,thirdNo;
+		
+		//Constructor
+		public TestMax(T firstNo,T secondNo,T thirdNo) {
+			this.firstNo=firstNo;
+			this.secondNo=secondNo;
+			this.thirdNo=thirdNo;
 		}
 		
-		System.out.println("Maximum of "+first+","+second+" and "+third+" is =" +max);
-		
+		/*Generic method using compareTo to find out the maximum of Integers
+		 * @param max is used to assume first is maximum then compare with second and third
+		 * Refactoring: To create Generic Class to take in 3 variables of Generic Type
+		 */
+		 public static <T extends Comparable<T>> T maximumNo(T firstNo,T secondNo,T thirdNo) {
+				T max = firstNo;  
+				if(secondNo.compareTo(max)>0) {
+					max=secondNo;
+				}
+				if(thirdNo.compareTo(max)>0) {
+					max=thirdNo;
+				}
+				printMax(firstNo,secondNo,thirdNo,max);
+				return max;
+			}
+		 
+		 //Method to print the maximum Value
+		 public static <T> void printMax(T firstNo,T secondNo,T thirdNo,T max)
+			{
+				System.out.printf("Maximum of %s, %s and %s is %s .\n",firstNo,secondNo,thirdNo,max);
+			}
+
 	}
-}
